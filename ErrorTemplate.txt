@@ -10,14 +10,14 @@
       </ObjectAnimationUsingKeyFrames>
     </Storyboard>
 
-    <!-- Template für die Fehlerdarstellung direkt am Control -->
+    <!-- Template fÃ¼r die Fehlerdarstellung direkt am Control -->
     <Style x:Key="ControlErrorTemplate" TargetType="Control">
       <Style.Resources>
         <DataTemplate x:Key="ErrorMessagesTemplate">
           <StackPanel>
             <TextBlock Text="Fehlermeldungen:"/>
 
-            <!-- Darstellung aller Meldungen für das betrachtete Control -->
+            <!-- Darstellung aller Meldungen fÃ¼r das betrachtete Control -->
             <ItemsControl ItemsSource="{Binding }">
               <ItemsControl.ItemTemplate>
                 <DataTemplate>
@@ -47,7 +47,7 @@
                 <TextBlock Text="!" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" 
                                 FontSize="11pt" FontWeight="Bold" Margin="0,0,0,1"/>
                 <Grid.Triggers>
-                  <!-- Animation des Icons -->
+                  <!-- Trigger zur Animation des Icons -->
                   <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <BeginStoryboard Storyboard="{StaticResource FlashErrorIcon}"/>
                   </EventTrigger>
